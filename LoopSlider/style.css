@@ -1,0 +1,16 @@
+.loop-slider {
+	height: 200px;
+	overflow: hidden;
+	position: relative;
+}
+.loop-slider-wrap {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.loop-slider-wrap ul {
+  padding-right: 2rem;
+}
+.loop-slider-wrap li {
+  width: 400px;
+}
