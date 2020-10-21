@@ -82,11 +82,34 @@ button:focus {
 .bg-white {
   background: #fff; }
 
-/* ===============
-flex系
-=============== */
+@media screen and (max-width: 768px) {
+  .pc {
+    display: none; } }
+@media screen and (min-width: 768px) {
+  .sp {
+    display: none; } }
+.cursor {
+  cursor: default !important; }
+
+.pointer {
+  cursor: pointer !important; }
+
+.modal-default {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8); }
+
+.dot {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis; }
+
 .container,
 .container-fluid {
+  width: 100%;
   padding-right: 0;
   padding-left: 0;
   margin-right: auto;
@@ -102,15 +125,8 @@ flex系
     padding-right: 0 !important; }
 
 /*====================
-flex系一覧
+Bootstrap flex系一覧
 =====================*/
-/* ===============
-height系(rem指定)
-width系(rem指定)
-width系
-padding系
-margin系
-=============== */
 /*====================
 height・width(px)
 =====================*/
@@ -1835,9 +1851,6 @@ height・width(%)
 .wm-100 {
   width: 100% !important; }
 
-/*====================
-padding系
-=====================*/
 .p-025 {
   padding: 0.25rem !important; }
 
@@ -2085,9 +2098,6 @@ padding系
 .py-10 {
   padding-bottom: 10rem !important; }
 
-/*====================
-margin系
-=====================*/
 .m-025 {
   margin: 0.25rem !important; }
 
@@ -2335,12 +2345,6 @@ margin系
 .my-10 {
   margin-bottom: 10rem !important; }
 
-/* ===============
-font系
-border系
-// スクロール系
-// shadow系
-=============== */
 /*====================
 font系
 =====================*/
@@ -4039,29 +4043,4 @@ scroll系
 .over-wrap {
   overflow: wrap; }
 
-@media screen and (max-width: 768px) {
-  .pc {
-    display: none; } }
-@media screen and (min-width: 768px) {
-  .sp {
-    display: none; } }
-.cursor {
-  cursor: default !important; }
-
-.pointer {
-  cursor: pointer !important; }
-
-.modal-default {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8); }
-
-.dot {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis; }
-
-/*# sourceMappingURL=custom.css.map */
+/*# sourceMappingURL=app.css.map */
