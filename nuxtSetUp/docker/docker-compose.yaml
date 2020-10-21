@@ -1,0 +1,19 @@
+version: "3"
+services:
+  client:
+    container_name: nuxt_client
+    # ここで指定した階層外のファイルは指定できない
+    build:
+      context: ./
+      dockerfile: Dockerfile.prod
+    ports:
+      - 3000:80
+
+
+volumes:
+  node-packages:
+    external: false
+
+networks:
+  default:
+    external: false
