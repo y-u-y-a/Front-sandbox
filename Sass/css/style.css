@@ -1,9 +1,0 @@
-@charset "UTF-8";
-
-/* Bootstrap */
-@import "origin/bootstrap.min.css";
-@import "origin/bootstrap-grid.min.css";
-@import "origin/bootstrap-reboot.min.css";
-
-/* Sass */
-@import "app.css";

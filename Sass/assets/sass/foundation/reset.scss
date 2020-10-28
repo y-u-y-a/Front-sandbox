@@ -48,6 +48,21 @@ a {
 a:hover {
   text-decoration: none;
 }
-button:focus {
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
   outline: 0;
+}
+select{
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  appearance:none;
+  border-radius: 0;
+  margin: 0;
+  padding: 0;
+  background: none transparent;
+  vertical-align: middle;
+  /* 代わりに任意の画像を指定 */
+  background: url(../images/form/select_icon.png) no-repeat center right 10px/16px 16px;
 }
