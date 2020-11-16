@@ -4,6 +4,7 @@
 1. Create Nuxt Project
 2. Exec commands
 3. Edit nuxt.config.js
+3. Edit package.json
 
 ## 1. Create Nuxt Project
 ```sh:
@@ -47,4 +48,9 @@ export default {
         '/api/': process.env.API_URL
     }
 }
+```
+
+4. Edit package.json
+```json:
+"dev": "HOST=0.0.0.0 PORT=3000 nuxt",
 ```

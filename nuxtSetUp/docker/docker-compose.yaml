@@ -9,6 +9,18 @@ services:
   #     - ft_node_modules:/code/node_modules
   #   ports:
   #     - 3000:80
+  frontend:
+    container_name: frontend
+    build:
+      context: .
+      dockerfile: ./build/frontend/Dockerfile.dev
+    volumes:
+      - ft_node_modules:/code/node_modules
+      - ./frontend:/code
+    ports:
+      - 3000:3000
+    working_dir: /code
+    command: npm run dev
 
 
 volumes:
