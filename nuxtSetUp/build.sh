@@ -4,7 +4,7 @@
 # カレントディレクトリはコマンドを実行する場所
 # =====================================
 
-# 不要ファイルを削除
+# Delete files
 rm \
 ./store/README.md \
 ./static/README.md \
@@ -15,11 +15,11 @@ rm \
 ./components/README.md \
 ./assets/README.md
 
-# srcディレクトリに集約
+# Summarize to src
 mkdir src
 mv assets components layouts pages plugins static store middleware src/
 
-# assets関係の作成
+# Create assets
 SASS_DIR="src/assets/sass"
 
 mkdir src/assets/images src/assets/sass
@@ -29,16 +29,16 @@ $SASS_DIR/reset.scss \
 $SASS_DIR/colors.scss \
 $SASS_DIR/customs.scss
 
-# sassファイルの中身をコピー
+## Sass
 cat ./nuxtSetUp/sass/app.scss > $SASS_DIR/app.scss
 cat ./nuxtSetUp/sass/reset.scss > $SASS_DIR/reset.scss
 cat ./nuxtSetUp/sass/colors.scss > $SASS_DIR/colors.scss
 
-# vueファイルの書き換え
+# Replace vue files
 cp ./nuxtSetUp/templates/default.vue src/layouts/
 cp ./nuxtSetUp/templates/Index.vue src/pages/
 
-# bootstrap, sass, axios, dotenvをインストール =============
+# Install bootstrap, sass, axios, dotenv
 npm install \
     sass-loader \
     node-sass \
@@ -47,6 +47,9 @@ npm install \
     @nuxtjs/dotenv
 
 
-# Docker関係のファイルを移動
-mv ./nuxtSetUp/docker/Dockerfile ./
+# Move files
+## Docker
+mv ./nuxtSetUp/docker/Dockerfile.prod ./
 mv ./nuxtSetUp/docker/docker-compose.yaml ./
+## .env
+cp ./nuxtSetUp/.env.sample ./.env

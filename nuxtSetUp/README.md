@@ -1,22 +1,25 @@
 # How to
 
+## 目次
+1. Create Nuxt Project
+2. Exec commands
+3. Edit nuxt.config.js
+
 ## 1. Create Nuxt Project
-```
+```sh:
 $ npx create-nuxt-app [プロジェクト名]
 ```
 
-## 2. Exec these commands
-```
-$ git clone https://github.com/y-u-y-a/nuxtSetUp.git
-
-$ bash nuxtSetUp/build.sh
-
+## 2. Exec commands
+```sh:
+$ cd [プロジェクト名]
+$ svn export https://github.com/y-u-y-a/Front-sandbox/trunk/nuxtSetUp
+$ sh nuxtSetUp/build.sh
 $ rm -rf nuxtSetUp
 ```
 
 ## 3. Edit nuxt.config.js
-```javascript
-
+```js
 export default {
     mode: 'universal',
     srcDir: 'src/', // 追加
@@ -44,10 +47,4 @@ export default {
         '/api/': process.env.API_URL
     }
 }
-```
-
-## 4. Create .env
-```
-PROJECT_NAME=サンプルアプリ
-API_URL=https://qiita.com/
 ```
